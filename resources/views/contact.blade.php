@@ -11,7 +11,7 @@
         <div class="contact-details">
             <h2 class="text-3xl font-bold mb-8 text-left">About MSUITES</h2>
             <p><strong>Address:</strong> 1015 Metropolitan Ave. Makati City, 1205 Metro Manila</p>
-            <p><strong>Email:</strong> info@msuiteshotel.com</p>
+            <p><strong>Email:</strong> info@msuitesmakati.com</p>
             <p><strong>Phone:</strong> +63 922 654 0528</p>
 
             <h3>Location Map</h3>

@@ -50,8 +50,8 @@ return [
     ],
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'miles.sdc@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'MSuites HOTEL'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info.msuitesmakati@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'MSuites Hotel'),
     ],
 
 ];

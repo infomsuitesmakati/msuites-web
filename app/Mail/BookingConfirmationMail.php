@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use App\Models\Booking;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -13,20 +12,14 @@ class BookingConfirmationMail extends Mailable
 
     public $booking;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct(Booking $booking)
+    public function __construct($booking)
     {
         $this->booking = $booking;
     }
 
-    /**
-     * Build the message.
-     */
     public function build()
     {
         return $this->subject('Booking Confirmation - MSuites Hotel')
-                    ->markdown('emails.booking.confirmation');
+                    ->view('emails.booking-confirmation');
     }
 }

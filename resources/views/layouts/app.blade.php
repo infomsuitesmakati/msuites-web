@@ -91,7 +91,7 @@
                 <h3 class="text-lg font-bold text-white mb-3">Contact Info</h3>
                 <p class="text-sm">📍 1015 Metropolitan Ave, 1203 Makati City, Metro Manila</p>
                 <p class="text-sm">📞 808-4012</p>
-                <p class="text-sm">📧 info.msuites@gmail.com</p>
+                <p class="text-sm">📧 info.msuitesmakati@gmail.com</p>
                 <div class="flex gap-4 mt-3">
                     <a href="https://www.segoviagroup.com/" class="hover:text-indigo-800">🌐</a>
                     <a href="https://www.facebook.com/msuiteshotelofficial" target="_blank" class="hover:text-indigo-600 transition">

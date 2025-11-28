@@ -2,34 +2,35 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Log;
-use App\Mail\BookingConfirmedMail;
-use App\Models\Room;
+use Carbon\Carbon;
 
 class Booking extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
-        'name', 'email', 'check_in', 'check_out', 'guests', 'room_id',
+        'name',
+        'email',
+        'check_in',
+        'check_out',
+        'check_in_time',
+        'check_out_time',
+        'room_type',
+        'guests',
+        'room_id',
     ];
 
-    // Relationship with Room
-    public function room()
+    // Format check-in time (12-hour)
+    public function getCheckInTimeAttribute($value)
     {
-        return $this->belongsTo(Room::class, 'room_id'); // ✅ explicitly set foreign key
+        return Carbon::parse($value)->format('h:i A');
     }
 
-    // Automatically send email after creation
-    protected static function booted()
-{
-    static::created(function ($booking) {
-        try {
-            Mail::to($booking->email)->queue(new BookingConfirmedMail($booking)); // ✅ queue instead of send
-        } catch (\Exception $e) {
-            Log::error('Booking confirmation email failed: ' . $e->getMessage());
-        }
-    });
-}
-
+    // Format check-out time (12-hour)
+    public function getCheckOutTimeAttribute($value)
+    {
+        return Carbon::parse($value)->format('h:i A');
+    }
 }

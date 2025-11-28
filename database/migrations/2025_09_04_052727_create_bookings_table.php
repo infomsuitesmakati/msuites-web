@@ -14,6 +14,8 @@ return new class extends Migration
             $table->string('email');
             $table->date('check_in');
             $table->date('check_out');
+            $table->time('check_in_time'); 
+            $table->time('check_out_time');
             $table->integer('guests');
             $table->foreignId('room_id')->constrained()->onDelete('cascade');
             $table->timestamps();

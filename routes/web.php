@@ -13,7 +13,7 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/rooms/{id}', [PageController::class, 'roomDetails'])->name('rooms.details');
 
 // Booking
-Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store'); 
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
 //bookroom
 Route::get('/book-room', [BookingController::class, 'create'])->name('bookings.create');
